@@ -1,3 +1,3 @@
-outputs "vpc_cidr" {
+output "vpc_cidr" {
     value = var.vpc_cidr
 }
