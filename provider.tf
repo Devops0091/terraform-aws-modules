@@ -10,4 +10,5 @@ provider "aws" {
 
 provider "circleci" {
   # Configuration options
+  alias = "ci"
 }
