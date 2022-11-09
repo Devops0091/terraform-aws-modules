@@ -8,6 +8,6 @@ module "circleci_context" {
     circleci_context_name = "circleci_context"
  
     providers = {
-       provider = circleci.ci
+       circleci = circleci.ci
   }
 }
