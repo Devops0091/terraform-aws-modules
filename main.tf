@@ -6,5 +6,8 @@ module "vpc" {
 module "circleci_context" {
     source = "./modules/circle-ci"
     circleci_context_name = "circleci_context"
-    provider = circleci.ci
+ 
+    providers = {
+       provider = circleci.ci
+  }
 }
