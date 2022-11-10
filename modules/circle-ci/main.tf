@@ -12,7 +12,6 @@ variable "circleci_context_name" {
     #default = "sdcsc"
 }
 
-/*
 provider "circleci" {
   # Configuration options
   alias = "ci"
@@ -21,4 +20,3 @@ provider "circleci" {
   organization = "ankush0991"
   }
 
-  */
