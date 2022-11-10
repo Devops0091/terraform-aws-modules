@@ -13,7 +13,6 @@ module "circleci_context" {
   }
 }
 
-*/
 
 resource "circleci_context" "build" {
   name      = var.circleci_context_name
@@ -28,3 +27,6 @@ variable "circleci_context_name" {
     description = "circle ci context name"
     default = "sdcsc"
 }
+
+
+*/
