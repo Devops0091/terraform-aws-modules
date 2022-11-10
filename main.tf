@@ -5,14 +5,6 @@ module "vpc" {
 }
 
 
-module "circleci_context" {
-    source = "./modules/circle-ci"
-    circleci_context_name = "circleci_context"
-
-    providers = {
-       circleci = circleci.ci
-  }
-}
 
 
 resource "circleci_context" "build" {
@@ -31,3 +23,10 @@ variable "circleci_context_name" {
 
 
 */
+
+module "circleci_context" {
+    source = "./modules/circle-ci"
+    circleci_context_name = "circleci_context"
+
+
+}
