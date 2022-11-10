@@ -7,7 +7,7 @@ module "vpc" {
 module "context" {
     source = "./modules/circle-ci"
     circleci_context_name = "circleci_context"
-provider "circleci" {
+providers "circleci" {
   # Configuration options
   alias = "ci"
   api_token = "8daab594c8bb58e6e3aee9c2d0909fbf77972037"
