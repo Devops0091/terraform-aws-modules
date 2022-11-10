@@ -13,5 +13,5 @@ provider "circleci" {
   alias = "ci"
   api_token = "96442095e8001a117a2a1674a163ecebbab9d049"
   vcs_type     = "github"
-  organization = "a111b7df-271e-4ba3-b329-032d859e4968"
+  organization = "8daab594c8bb58e6e3aee9c2d0909fbf77972037"
   }
