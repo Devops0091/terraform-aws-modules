@@ -7,7 +7,7 @@ provider "aws" {
     role_arn = "arn:aws:iam::915872208696:role/OrganizationAccountAccessRole"
   }
 }
-
+/*
 provider "circleci" {
   # Configuration options
   alias = "ci"
@@ -15,3 +15,5 @@ provider "circleci" {
   vcs_type     = "github"
   organization = "ankush0991"
   }
+
+  */
