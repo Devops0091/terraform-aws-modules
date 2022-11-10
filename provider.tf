@@ -11,7 +11,7 @@ provider "aws" {
 provider "circleci" {
   # Configuration options
   alias = "ci"
-  api_token = "96442095e8001a117a2a1674a163ecebbab9d049"
+  api_token = "8daab594c8bb58e6e3aee9c2d0909fbf77972037"
   vcs_type     = "github"
-  organization = "8daab594c8bb58e6e3aee9c2d0909fbf77972037"
+  organization = "a111b7df-271e-4ba3-b329-032d859e4968"
   }
