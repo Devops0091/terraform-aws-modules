@@ -1,6 +1,6 @@
 resource "circleci_context" "build" {
   name      = var.circleci_context_name
-   provider = circleci.ci
+ #  provider = circleci.ci
 
 }
 
@@ -12,7 +12,7 @@ variable "circleci_context_name" {
     #default = "sdcsc"
 }
 
-
+/*
 provider "circleci" {
   # Configuration options
   alias = "ci"
@@ -20,3 +20,5 @@ provider "circleci" {
   vcs_type     = "github"
   organization = "ankush0991"
   }
+
+  */
