@@ -18,6 +18,7 @@ module "cdn" {
     cloudfront = {
       domain_name = "${module.s3_one.s3_bucket_website_endpoint}"
   }
+  }
 
   default_cache_behavior = {
     allowed_methods  = ["GET", "HEAD", "OPTIONS"]
