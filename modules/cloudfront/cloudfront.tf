@@ -17,6 +17,12 @@ module "cdn" {
   origin = {
       domain_name = "${module.s3_one.s3_bucket_website_endpoint}"
        origin_id   = "cloudfront"
+     custom_origin_config {
+      http_port              = "80"
+      https_port             = "443"
+      origin_protocol_policy = "http-only"
+      origin_ssl_protocols   = ["TLSv1", "TLSv1.1", "TLSv1.2"]
+    }
 
   }
 
