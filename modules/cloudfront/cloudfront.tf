@@ -15,21 +15,15 @@ module "cdn" {
   }
 
   origin = {
-
-    s3_bucket_one = {
-
       domain_name = "${module.s3_one.s3_bucket_website_endpoint}"
-      s3_origin_config = {
-       origin_access_identity = "s3_bucket_one"
-     }
-    }
+       origin_id   = "cloudfront"
 
   }
 
   default_cache_behavior = {
     allowed_methods  = ["GET", "HEAD", "OPTIONS"]
     cached_methods   = ["GET", "HEAD"]
-    target_origin_id = "s3_bucket_one"
+    target_origin_id = "cloudfront"
     compress         = true
     query_string     = false
 
