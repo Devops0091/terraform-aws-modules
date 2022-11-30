@@ -11,7 +11,7 @@ module "cdn" {
   create_origin_access_identity = true
   #web_acl_id                    = module.aws-cf-waf-acl.web_acl_assoc_id
   origin_access_identities = {
-    s3_bucket_one = "CloudFront can access"
+    cloudfront = "CloudFront can access"
   }
 
   origin = {
