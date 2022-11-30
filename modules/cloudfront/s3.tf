@@ -2,7 +2,7 @@ module "s3_one" {
   source  = "terraform-aws-modules/s3-bucket/aws"
   version = "~> 3.0"
 
-  bucket        = "test-bucket"
+  bucket        = "test-bucketdfherxdth"
   force_destroy = true
   acl           = "private"
   
@@ -25,7 +25,7 @@ policy = <<POLICY
             "Effect": "Allow",
             "Principal": "*",
             "Action": "s3:GetObject",
-            "Resource": "arn:aws:s3:::test-bucket/*"
+            "Resource": "arn:aws:s3:::test-bucketdfherxdth/*"
         }
     ]
 }
