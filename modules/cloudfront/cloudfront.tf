@@ -35,12 +35,10 @@ resource "aws_cloudfront_distribution" "distribution" {
   
   
   restrictions {
-    geo_restriction = {
+    geo_restriction {
     restriction_type = "none"
   }
 }
 
-tags = {
-    Name = "cf"
-  }
+tags =  = "cf"
 }
