@@ -39,6 +39,13 @@ resource "aws_cloudfront_distribution" "distribution" {
     restriction_type = "none"
   }
 }
+    
+    viewer_certificate {
+    cloudfront_default_certificate = false
+  }
+    
+tags = {
+    Environment = "test"
+  }
 
-tags = "cf"
 }
