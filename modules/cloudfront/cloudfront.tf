@@ -13,10 +13,12 @@ module "cdn" {
   origin_access_identities = {
     s3_bucket_one = "CloudFront can access"
   }
-
+  
+  origin = {
   dynamic_s3_origin_config = [{
       domain_name = "${module.s3_one.s3_bucket_website_endpoint}"
   }]
+  }
 
   default_cache_behavior = {
     allowed_methods  = ["GET", "HEAD", "OPTIONS"]
