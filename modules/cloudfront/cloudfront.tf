@@ -40,5 +40,5 @@ resource "aws_cloudfront_distribution" "distribution" {
   }
 }
 
-tags =  = "cf"
+tags = "cf"
 }
