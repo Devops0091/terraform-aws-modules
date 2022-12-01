@@ -11,16 +11,20 @@ module "cdn" {
   create_origin_access_identity = true
   #web_acl_id                    = module.aws-cf-waf-acl.web_acl_assoc_id
   origin_access_identities = {
-    cloudfront = "CloudFront can access"
+    s3_bucket_one = "CloudFront can access"
   }
 
   origin = {
     cloudfront = {
       domain_name = "${module.s3_one.s3_bucket_website_endpoint}"
-  }
+       s3_origin_config = {
+        origin_access_identity = "s3_bucket_one"
+      }
+    }
   }
 
   default_cache_behavior = {
+    path_pattern     = "/static/*"
     allowed_methods  = ["GET", "HEAD", "OPTIONS"]
     cached_methods   = ["GET", "HEAD"]
     target_origin_id = "cloudfront"
