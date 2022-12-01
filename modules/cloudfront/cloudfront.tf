@@ -14,7 +14,7 @@ resource "aws_cloudfront_distribution" "distribution" {
     aliases                       = ["test.com"]
     enabled                       = true
     
-    default_cache_behavior = {
+    default_cache_behavior  {
     allowed_methods  = ["GET", "HEAD", "OPTIONS"]
     cached_methods   = ["GET", "HEAD"]
     target_origin_id = "S3-Website-${module.s3_one.s3_bucket_website_endpoint}"
