@@ -19,6 +19,7 @@ module "cdn" {
       domain_name = module.s3_one.s3_bucket_website_endpoint
         origin_id   = "S3-Website-${module.s3_one.s3_bucket_website_endpoint}"
         }
+   }
 
   default_cache_behavior = {
     allowed_methods  = ["GET", "HEAD", "OPTIONS"]
